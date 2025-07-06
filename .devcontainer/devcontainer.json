@@ -2,7 +2,7 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/nordcominc/devcontainer-features/android-sdk:1": {
-        "platform": "33"
+      "platform": "33"
     }
   },
   "customizations": {
@@ -14,7 +14,8 @@
         "vscode.shellscript",
         "vscode.ini",
         "quentinguidee.gitignore-ultimate",
-        "vscode.yaml"
+        "vscode.yaml",
+        "adamraichu.zip-viewer"
       ]
     }
   }
