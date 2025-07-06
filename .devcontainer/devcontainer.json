@@ -4,5 +4,18 @@
     "ghcr.io/nordcominc/devcontainer-features/android-sdk:1": {
         "platform": "33"
     }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mathiasfrohlich.Kotlin",
+        "vscode.json",
+        "vscode.bat",
+        "vscode.shellscript",
+        "vscode.ini",
+        "quentinguidee.gitignore-ultimate",
+        "vscode.yaml"
+      ]
+    }
   }
 }
