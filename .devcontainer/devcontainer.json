@@ -6,6 +6,9 @@
     },
     "ghcr.io/kreemer/features/chrometesting:1.0.1": {}
   },
+  "containerEnv": {
+    "CHROME_BIN": "/usr/local/bin/chrome"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
