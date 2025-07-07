@@ -23,7 +23,7 @@ jobs:
 
       - name: Check tool versions in devcontainer
         run: |
-          devcontainer run --workspace-folder . -- bash -c "
+          devcontainer exec --workspace-folder . "
             echo 'sdkmanager:' && sdkmanager --version
             echo 'adb:' && adb --version
             echo 'chrome:' && chrome --version
