@@ -1,6 +1,12 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
+    "ghcr.io/devcontainers/features/common-utils:2.5.3": {
+      "installZsh": false,
+      "installOhMyZsh": false,
+      "installOhMyZshConfig": false,
+      "nonFreePackages": true
+    },
     "ghcr.io/nordcominc/devcontainer-features/android-sdk:1": {
       "platform": "31"
     },
