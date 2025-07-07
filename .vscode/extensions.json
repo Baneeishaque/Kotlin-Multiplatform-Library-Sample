@@ -22,10 +22,12 @@
         "github.vscode-github-actions",
         "sanjulaganepola.github-local-actions",
         "ms-vscode-remote.remote-containers",
+        "ms-azuretools.vscode-containers",
         "github.copilot",
         "github.copilot-chat",
         "nick-rudenko.back-n-forth",
         "fittentech.fitten-code",
         "redhat.vscode-yaml",
+        "eamodio.gitlens",
     ]
 }
