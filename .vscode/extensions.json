@@ -12,6 +12,7 @@
         "github.copilot-chat",
         "ms-vscode-remote.remote-containers",
         "github.vscode-pull-request-github",
-        "pkief.material-icon-theme"
+        "pkief.material-icon-theme",
+        "vscjava.vscode-gradle"
     ]
 }

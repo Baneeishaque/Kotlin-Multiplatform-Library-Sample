@@ -21,7 +21,8 @@
         "GitHub.copilot",
         "GitHub.copilot-chat",
         "GitHub.vscode-pull-request-github",
-        "PKief.material-icon-theme"
+        "PKief.material-icon-theme",
+        "vscjava.vscode-gradle"
       ]
     }
   }
