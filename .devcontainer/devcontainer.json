@@ -13,31 +13,33 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "mathiasfrohlich.Kotlin",
         "vscode.json",
+        "vscode.json-language-features",
         "vscode.bat",
         "vscode.shellscript",
         "vscode.ini",
-        "quentinguidee.gitignore-ultimate",
         "vscode.yaml",
-        "adamraichu.zip-viewer",
-        "ms-vscode-remote.remote-containers",
-        "GitHub.copilot",
-        "GitHub.copilot-chat",
-        "GitHub.vscode-pull-request-github",
-        "PKief.material-icon-theme",
-        "vscjava.vscode-gradle",
         "vscode.terminal-suggest",
         "vscode.search-result",
         "vscode.references-view",
         "vscode.merge-conflict",
-        "vscode.json-language-features",
-        "GitHub.codespaces",
         "vscode.git-base",
         "vscode.git",
         "vscode.configuration-editing",
+        "mathiasfrohlich.kotlin",
+        "quentinguidee.gitignore-ultimate",
+        "adamraichu.zip-viewer",
+        "github.vscode-pull-request-github",
+        "pkief.material-icon-theme",
+        "vscjava.vscode-gradle",
         "github.vscode-github-actions",
-        "SanjulaGanepola.github-local-actions"
+        "sanjulaganepola.github-local-actions",
+        "ms-vscode-remote.remote-containers",
+        "github.copilot",
+        "github.copilot-chat",
+        "nick-rudenko.back-n-forth",
+        "fittentech.fitten-code",
+        "redhat.vscode-yaml"
       ]
     }
   }
