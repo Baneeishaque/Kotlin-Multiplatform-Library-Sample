@@ -20,7 +20,8 @@
         "ms-vscode-remote.remote-containers",
         "GitHub.copilot",
         "GitHub.copilot-chat",
-        "GitHub.vscode-pull-request-github"
+        "GitHub.vscode-pull-request-github",
+        "PKief.material-icon-theme"
       ]
     }
   }
