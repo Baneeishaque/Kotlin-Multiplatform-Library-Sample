@@ -102,13 +102,13 @@ jobs:
           ./gradlew macosArm64MainKlibrary
 
       - name: Run iOS tests
-        run: ./gradlew :common:iosX64Test :common:iosArm64Test :common:iosSimulatorArm64Test
+        run: ./gradlew :common:iosX64TestProcessResources :common:iosArm64TestProcessResources :common:iosSimulatorArm64TestProcessResources :common:iosX64TestBinaries :common:iosArm64TestBinaries :common:iosSimulatorArm64TestBinaries :common:iosX64TestKlibrary :common:iosArm64TestKlibrary :common:iosSimulatorArm64TestKlibrary
 
       - name: Run tvOS tests
-        run: ./gradlew :common:tvosX64Test :common:tvosArm64Test :common:tvosSimulatorArm64Test
+        run: ./gradlew :common:tvosX64TestProcessResources :common:tvosArm64TestProcessResources :common:tvosSimulatorArm64TestProcessResources :common:tvosX64TestBinaries :common:tvosArm64TestBinaries :common:tvosSimulatorArm64TestBinaries :common:tvosX64TestKlibrary :common:tvosArm64TestKlibrary :common:tvosSimulatorArm64TestKlibrary
 
       - name: Run watchOS tests
-        run: ./gradlew :common:watchosX64Test :common:watchosArm64Test :common:watchosSimulatorArm64Test
+        run: ./gradlew :common:watchosX64TestProcessResources :common:watchosArm64TestProcessResources :common:watchosSimulatorArm64TestProcessResources :common:watchosX64TestBinaries :common:watchosArm64TestBinaries :common:watchosSimulatorArm64TestBinaries :common:watchosX64TestKlibrary :common:watchosArm64TestKlibrary :common:watchosSimulatorArm64TestKlibrary
 
       - name: Run macOS tests
-        run: ./gradlew :common:macosX64Test :common:macosArm64Test
+        run: ./gradlew :common:macosX64TestProcessResources :common:macosArm64TestProcessResources :common:macosX64TestBinaries :common:macosArm64TestBinaries :common:macosX64TestKlibrary :common:macosArm64TestKlibrary
