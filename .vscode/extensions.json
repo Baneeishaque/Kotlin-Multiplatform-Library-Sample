@@ -13,6 +13,15 @@
         "ms-vscode-remote.remote-containers",
         "github.vscode-pull-request-github",
         "pkief.material-icon-theme",
-        "vscjava.vscode-gradle"
+        "vscjava.vscode-gradle",
+        "vscode.terminal-suggest",
+        "vscode.search-result",
+        "vscode.references-view",
+        "vscode.merge-conflict",
+        "vscode.json-language-features",
+        "GitHub.codespaces",
+        "vscode.git-base",
+        "vscode.git",
+        "vscode.configuration-editing"
     ]
 }
