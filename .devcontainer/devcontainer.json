@@ -35,7 +35,9 @@
         "GitHub.codespaces",
         "vscode.git-base",
         "vscode.git",
-        "vscode.configuration-editing"
+        "vscode.configuration-editing",
+        "github.vscode-github-actions",
+        "SanjulaGanepola.github-local-actions"
       ]
     }
   }
