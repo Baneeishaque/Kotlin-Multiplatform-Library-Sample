@@ -1,0 +1,114 @@
+name: Kotlin Multiplatform CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          install-chromedriver: true
+          install-dependencies: true
+
+      - name: Set Chrome no-sandbox flag for JS tests
+        run: echo "KARMA_CHROME_FLAGS=--no-sandbox" >> $GITHUB_ENV
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      - name: Set CHROME_BIN for JS tests
+        run: |
+          if command -v google-chrome >/dev/null 2>&1; then
+            echo "CHROME_BIN=$(which google-chrome)" >> $GITHUB_ENV
+          elif command -v chrome >/dev/null 2>&1; then
+            echo "CHROME_BIN=$(which chrome)" >> $GITHUB_ENV
+          else
+            echo "Chrome executable not found!" >&2
+            exit 1
+          fi
+
+      - name: Build JVM, Android, JS, Linux, Windows variants
+        run: |
+          ./gradlew jvmMainClasses
+          ./gradlew jsMainClasses
+          ./gradlew jsBrowserProductionWebpack
+          ./gradlew linuxX64MainKlibrary
+          ./gradlew mingwX64MainKlibrary
+
+      - name: Run JVM tests
+        run: ./gradlew jvmTest
+
+      - name: Run Android unit tests (debug/release)
+        run: |
+          ./gradlew testDebugUnitTest
+          ./gradlew testReleaseUnitTest
+
+      - name: Run JS Browser tests
+        run: ./gradlew jsBrowserTest
+
+      - name: Run JS Node tests
+        run: ./gradlew jsNodeTest
+
+      - name: Run Linux tests
+        run: ./gradlew linuxX64Test
+
+      - name: Run Windows tests
+        run: ./gradlew mingwX64Test
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build Apple targets (iOS, tvOS, watchOS, macOS)
+        run: |
+          ./gradlew iosX64MainKlibrary
+          ./gradlew iosArm64MainKlibrary
+          ./gradlew iosSimulatorArm64MainKlibrary
+          ./gradlew tvosX64MainKlibrary
+          ./gradlew tvosArm64MainKlibrary
+          ./gradlew tvosSimulatorArm64MainKlibrary
+          ./gradlew watchosX64MainKlibrary
+          ./gradlew watchosArm64MainKlibrary
+          ./gradlew watchosSimulatorArm64MainKlibrary
+          ./gradlew macosX64MainKlibrary
+          ./gradlew macosArm64MainKlibrary
+
+      - name: Run iOS tests
+        run: ./gradlew iosX64Test iosArm64Test iosSimulatorArm64Test
+
+      - name: Run tvOS tests
+        run: ./gradlew tvosX64Test tvosArm64Test tvosSimulatorArm64Test
+
+      - name: Run watchOS tests
+        run: ./gradlew watchosX64Test watchosArm64Test watchosSimulatorArm64Test
+
+      - name: Run macOS tests
+        run: ./gradlew macosX64Test macosArm64Test
