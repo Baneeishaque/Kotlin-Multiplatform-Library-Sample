@@ -16,7 +16,11 @@
         "vscode.ini",
         "quentinguidee.gitignore-ultimate",
         "vscode.yaml",
-        "adamraichu.zip-viewer"
+        "adamraichu.zip-viewer",
+        "ms-vscode-remote.remote-containers",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.vscode-pull-request-github"
       ]
     }
   }

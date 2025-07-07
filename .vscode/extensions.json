@@ -7,6 +7,10 @@
         "vscode.ini",
         "quentinguidee.gitignore-ultimate",
         "vscode.yaml",
-        "adamraichu.zip-viewer"
+        "adamraichu.zip-viewer",
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-vscode-remote.remote-containers",
+        "github.vscode-pull-request-github"
     ]
 }
